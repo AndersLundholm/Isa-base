@@ -1,0 +1,1 @@
+Isa is a PHP-boilerplate/framework for small websites. Isa was built by Anders Lundholm (anders@andlu.se) and it is based on "Anax" (https://github.com/mosbth/Anax-base) by Mikael Roos (me@mikaelroos.se).

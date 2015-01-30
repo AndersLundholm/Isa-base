@@ -1,0 +1,10 @@
+# Logs and databases #
+######################
+*.sqlite
+*.log
+
+# Temp and swap files #
+#######################
+*~
+*.swp
+*.swo
