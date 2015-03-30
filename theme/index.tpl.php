@@ -19,13 +19,12 @@
         </header>
         <div class="mainContainer">
             <div class="mainContent">
-                        <?=$main;?>
+                <?=$main;?>
             </div>
         </div>
     </div>
     <footer class="mainFooter">
         <?=$footer?>
-    </footer>
-                    
+    </footer>             
 </body>
 </html>

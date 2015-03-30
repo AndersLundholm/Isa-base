@@ -22,7 +22,7 @@ function get_title($title) {
  * @param array $items
  * @return string $html with the complete html encoded string.
  */
- function generate_menu($items) {
+function generate_menu($items) {
     $html = "<nav><ul class='menu'>\n";
     foreach($items as $item) {
         $html .= "<li><a href='{$item['url']}' title='{$item['title']}'>{$item['text']}</a>";

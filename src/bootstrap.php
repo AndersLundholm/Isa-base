@@ -9,7 +9,7 @@
  *
  */
 function myExceptionHandler($exception) {
-  echo "Isa: Uncaught exception: <p>" . $exception->getMessage() . "</p><pre>" . $exception->getTraceAsString(), "</pre>";
+    echo "Isa: Uncaught exception: <p>" . $exception->getMessage() . "</p><pre>" . $exception->getTraceAsString(), "</pre>";
 }
 set_exception_handler('myExceptionHandler');
  
@@ -19,13 +19,12 @@ set_exception_handler('myExceptionHandler');
  *
  */
 function myAutoloader($class) {
-  $path = ISA_INSTALL_PATH . "/src/{$class}/{$class}.php";
-  if(is_file($path)) {
-    include($path);
-  }
-  else {
-    throw new Exception("Classfile '{$class}' does not exists.");
-  }
+    $path = ISA_INSTALL_PATH . "/src/{$class}/{$class}.php";
+    if(is_file($path)) {
+        include($path);
+    } else {
+        throw new Exception("Classfile '{$class}' does not exists.");
+    }
 }
 spl_autoload_register('myAutoloader');
 
@@ -52,4 +51,24 @@ function getCurrentUrl() {
     $url .= $_SERVER["SERVER_NAME"] . $serverPort . htmlspecialchars(
         $_SERVER["REQUEST_URI"]);
     return $url;
+}
+
+
+/**
+ * Get the login status of the user in the form of a descriptive string if the
+ * user is logged in or not, and login/logout page.
+ * @return array with login status.
+ */
+function get_login_status() {
+    $login_status = array();
+    if(isset($_SESSION['user'])) {
+        $login_status['authenticated'] = true;
+        $login_status['str'] = "Log out";
+        $login_status['page'] = "logout.php";
+    } else {
+        $login_status['authenticated'] = false;
+        $login_status['str'] = "Log in";
+        $login_status['page'] = "login.php";
+    }
+    return $login_status;
 }
