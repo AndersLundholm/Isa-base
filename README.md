@@ -10,14 +10,14 @@ Based on "Anax" (https://github.com/mosbth/Anax-base) by Mikael Roos (me@mikaelr
 
 Included modules
 ------------------
-CBlog - Extends CContent to create a blog.
-CContent - Base for CBlog and CPage to create dynamic contentent on the website.
-CDatabase - Handles all the database connection details.
-CFileUpload - Enables uploading of images to the website.
-CImage - Image processing using PHP GD.
-CPage - Extends CContent to create dynamic pages.
-CTextFilter - Filters to format text.
-CUser - User authentication and administration.
+* CBlog - Extends CContent to create a blog.
+* CContent - Base for CBlog and CPage to create dynamic contentent on the website.
+* CDatabase - Handles all the database connection details.
+* CFileUpload - Enables uploading of images to the website.
+* CImage - Image processing using PHP GD.
+* CPage - Extends CContent to create dynamic pages.
+* CTextFilter - Filters to format text.
+* CUser - User authentication and administration.
 
 
 License 
